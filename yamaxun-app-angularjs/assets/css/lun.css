@@ -1,0 +1,168 @@
+*{
+    /*盒子模型：每一个标签都会包括外边距（margin），边框(border)，内边距(padding)，内容(content),默认情况内容的宽高就是widht,height*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    /*border-box包括padding,border,content-box是默认值，不设置box-sizing时就是此值，不包括padding, border*/
+    box-sizing: border-box;
+    background-color: #333;
+    font-family: "Times New Roman", 宋体, 黑体;
+    counter-reset: h2 -1;
+}
+a{
+    text-decoration: none;
+}
+article{
+    width: 900px;
+    margin: 20px auto;
+    padding: 80px 50px;
+    background-color: white;
+    counter-reset: figcaption;
+}
+p{
+    margin-bottom: 3px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+header h1{
+    font-family: 黑体;
+    font-size: 29px;
+    text-align: center;
+}
+header address{
+    font-style: normal;
+}
+header strong{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+}
+header span{
+    display: block;
+    font-size: 15px;
+    text-align: center;
+    font-family: 楷体;
+}
+header span:before{
+    content: "（";
+}
+header span:after{
+    content: "）";
+}
+header p{
+    font-family: 仿宋, "Times New Roman";
+    font-size: 15px;
+}
+header p:nth-of-type(1):before{
+    content: "摘要：";
+    font-weight: bold;
+}
+header p:nth-of-type(2):before{
+    content: "关键词：";
+    font-weight: bold;
+}
+header p:nth-of-type(3):before{
+    content: "中图分类号：";
+    font-weight: bold;
+}
+header[lang="en"]{
+    margin: 30px 0;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+header[lang="en"] p:nth-of-type(1):before{
+    content: "Abstract：";
+    font-weight: bold;
+}
+header[lang="en"] p:nth-of-type(2):before{
+    content: "Key words：";
+    font-weight: bold;
+}
+section{
+    font-size: 14px;
+}
+h2,h3,h4{
+    margin: 10px 0;
+}
+h2{
+    counter-increment: h2;
+    counter-reset: h3;
+    font-size: 18px;
+}
+h2:before{
+    content: counter(h2) " ";
+}
+section p{
+    text-indent: 2em;
+}
+.ajax cite{
+    font-style: normal;
+}
+.ajax cite:before{
+    content: "“";
+    font-family: 楷体;
+    font-size: 16px;
+}
+.ajax cite:after{
+    content: "”";
+    font-family: 楷体;
+    font-size: 16px;
+}
+figure{
+    text-align: center;
+}
+figcaption{
+    counter-increment: figcaption;
+}
+figcaption:before{
+    content: "图 "counter(figcaption) " ";
+}
+.sno1 p{
+    counter-increment: psno1;
+}
+.sno1 p:before{
+    content: counter(psno1) "） ";
+}
+.sno2 p{
+    counter-increment: psno2;
+}
+.sno2 p:before{
+    content: counter(psno2) "） ";
+}
+.sno3 p{
+    counter-increment: psno3;
+}
+.sno3 p:before{
+    content: counter(psno3) "） ";
+}
+.sno4 p{
+    counter-increment: psno4;
+}
+.sno4 p:before{
+    content: counter(psno4) "） ";
+}
+.sno5 p{
+    counter-increment: psno5;
+}
+.sno5 p:before{
+    content: counter(psno5) "） ";
+}
+h3{
+    counter-increment: h3;
+}
+h3:before{
+    content: counter(h2)"."counter(h3) " ";
+}
+li{
+    list-style: none;
+    counter-increment: li;
+}
+li:before{
+    content: "["counter(li)"]";
+}
+
